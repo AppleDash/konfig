@@ -1,0 +1,2 @@
+:foo_key: 'foo value'
+:foo_other_key: 'i will be overridden'
