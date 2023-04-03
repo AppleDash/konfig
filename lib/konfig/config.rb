@@ -23,7 +23,7 @@ module Konfig
       config_files.each do |filename|
         basename   = File.basename(filename, '.yml')
         local_file = File.join(root, 'local', "#{basename}.yml")
-        local      = File.exists?(local_file) ? YAML.load_file(local_file) : {}
+        local      = File.exist?(local_file) ? YAML.load_file(local_file) : {}
         parsed     = ConfigSection.new(YAML.load_file(filename), local)
 
         @config[basename] = parsed
